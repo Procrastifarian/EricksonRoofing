@@ -1,0 +1,1516 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#202923" />
+		<meta
+			name="description"
+			content="Erickson Roofing brings honest advice and dependable craftsmanship to local homeowners."
+		/>
+		<title>Erickson Roofing | Built for the long haul</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				--ink: #202923;
+				--ink-soft: #344138;
+				--cream: #f5f3ec;
+				--paper: #fbfaf6;
+				--muted: #777b70;
+				--line: #deddd4;
+				--moss: #78836e;
+				--copper: #ad7655;
+				--white: #fff;
+				--serif: Georgia, "Times New Roman", serif;
+				--sans: "DM Sans", sans-serif;
+				--display: "Manrope", sans-serif;
+			}
+			* {
+				box-sizing: border-box;
+			}
+			html {
+				scroll-behavior: smooth;
+			}
+			body {
+				margin: 0;
+				color: var(--ink);
+				background: var(--paper);
+				font-family: var(--sans);
+				-webkit-font-smoothing: antialiased;
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+			button,
+			input,
+			textarea {
+				font: inherit;
+			}
+			button,
+			a {
+				-webkit-tap-highlight-color: transparent;
+			}
+			.wrap {
+				width: min(1180px, calc(100% - 64px));
+				margin: 0 auto;
+			}
+			.topbar {
+				height: 40px;
+				background: var(--ink);
+				color: #d6d8cf;
+				font-size: 11px;
+				letter-spacing: 0.045em;
+			}
+			.topbar-inner {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.topbar p {
+				margin: 0;
+			}
+			.topbar a {
+				color: #e4c4a7;
+			}
+			.topbar-right {
+				display: flex;
+				align-items: center;
+				gap: 24px;
+			}
+			.navbar {
+				height: 82px;
+				background: var(--paper);
+				display: flex;
+				align-items: center;
+				position: relative;
+				z-index: 5;
+			}
+			.nav-inner {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.brand {
+				display: inline-flex;
+				align-items: center;
+				gap: 12px;
+			}
+			.brand-mark {
+				width: 39px;
+				height: 39px;
+				background: var(--ink);
+				color: #e5c3a3;
+				display: grid;
+				place-items: center;
+				border-radius: 50%;
+			}
+			.brand-mark svg {
+				width: 21px;
+				height: 21px;
+			}
+			.brand-name {
+				font: 800 16px var(--display);
+				letter-spacing: -0.045em;
+				line-height: 1.1;
+			}
+			.brand-name span {
+				display: block;
+				color: var(--muted);
+				font: 600 9px var(--sans);
+				letter-spacing: 0.19em;
+				text-transform: uppercase;
+				margin-top: 4px;
+			}
+			.nav-links {
+				display: flex;
+				align-items: center;
+				gap: 34px;
+				color: #525b51;
+				font-size: 12px;
+				font-weight: 600;
+			}
+			.nav-links a:not(.nav-cta):hover {
+				color: var(--copper);
+			}
+			.nav-cta {
+				padding: 13px 19px;
+				background: var(--ink);
+				color: var(--white);
+				border-radius: 2px;
+				transition: background 0.2s ease;
+			}
+			.nav-cta:hover,
+			.button-dark:hover {
+				background: #435247;
+			}
+			.menu-toggle {
+				display: none;
+				border: 0;
+				background: none;
+				padding: 7px;
+				color: var(--ink);
+			}
+			.hero {
+				min-height: 578px;
+				display: grid;
+				grid-template-columns: 48% 52%;
+				background: var(--cream);
+			}
+			.hero-copy {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+			}
+			.hero-copy-inner {
+				width: min(510px, calc(100% - 64px));
+				padding: 72px 60px 80px 0;
+			}
+			.eyebrow {
+				color: var(--copper);
+				font-size: 10px;
+				letter-spacing: 0.2em;
+				font-weight: 700;
+				text-transform: uppercase;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+			.eyebrow::before {
+				content: "";
+				display: block;
+				height: 1px;
+				width: 27px;
+				background: currentColor;
+			}
+			h1,
+			h2,
+			h3,
+			p {
+				margin-top: 0;
+			}
+			h1 {
+				font: 500 clamp(44px, 5vw, 66px)/1.06 var(--serif);
+				letter-spacing: -0.045em;
+				margin: 24px 0 20px;
+				max-width: 480px;
+			}
+			h1 em {
+				color: var(--moss);
+				font-weight: 400;
+			}
+			.hero-copy p {
+				color: #687066;
+				line-height: 1.8;
+				font-size: 14px;
+				max-width: 400px;
+				margin-bottom: 29px;
+			}
+			.button-dark {
+				display: inline-flex;
+				align-items: center;
+				gap: 18px;
+				padding: 15px 20px;
+				color: var(--white);
+				background: var(--ink);
+				border-radius: 2px;
+				font-size: 11px;
+				font-weight: 700;
+				transition: background 0.2s;
+			}
+			.button-dark svg {
+				width: 14px;
+				height: 14px;
+			}
+			.hero-image {
+				position: relative;
+				min-height: 578px;
+				overflow: hidden;
+				background: #596456;
+			}
+			.hero-image::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background:
+					linear-gradient(90deg, rgba(32, 41, 35, 0.08), transparent 32%),
+					linear-gradient(0deg, rgba(25, 31, 27, 0.35), transparent 45%);
+			}
+			.hero-image img {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				inset: 0;
+				object-fit: cover;
+				object-position: center 48%;
+			}
+			.hero-caption {
+				position: absolute;
+				z-index: 1;
+				bottom: 28px;
+				left: 35px;
+				color: white;
+				font-size: 10px;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+			}
+			.hero-caption span {
+				color: #e4c4a7;
+				margin-right: 10px;
+			}
+			.trustbar {
+				background: var(--ink);
+				color: #f4f1e9;
+			}
+			.trust-inner {
+				min-height: 96px;
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				align-items: center;
+			}
+			.trust-item {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 12px;
+				min-height: 43px;
+				border-right: 1px solid #485047;
+			}
+			.trust-item:first-child {
+				justify-content: flex-start;
+			}
+			.trust-item:last-child {
+				border-right: 0;
+				justify-content: flex-end;
+			}
+			.trust-icon {
+				color: #c69a79;
+				width: 19px;
+				height: 19px;
+				flex: 0 0 auto;
+			}
+			.trust-item span {
+				font-size: 11px;
+				color: #dfdfd7;
+			}
+			.trust-item strong {
+				display: block;
+				color: white;
+				font: 700 11px var(--display);
+				margin-bottom: 3px;
+			}
+			section {
+				scroll-margin-top: 25px;
+			}
+			.intro {
+				padding: 112px 0 116px;
+			}
+			.intro-grid {
+				display: grid;
+				grid-template-columns: 0.95fr 1.05fr;
+				gap: 105px;
+				align-items: center;
+			}
+			.intro h2,
+			.section-heading h2,
+			.service-copy h2,
+			.contact-copy h2 {
+				font: 500 clamp(34px, 4vw, 47px)/1.14 var(--serif);
+				letter-spacing: -0.035em;
+				margin: 17px 0;
+			}
+			.intro-copy {
+				max-width: 480px;
+			}
+			.intro-copy p,
+			.service-copy p {
+				color: #70756b;
+				font-size: 13px;
+				line-height: 1.9;
+			}
+			.text-link {
+				display: inline-flex;
+				gap: 10px;
+				align-items: center;
+				color: var(--ink);
+				font-size: 11px;
+				font-weight: 700;
+				border-bottom: 1px solid #b8b9ad;
+				padding-bottom: 7px;
+				margin-top: 8px;
+			}
+			.text-link svg {
+				width: 13px;
+				height: 13px;
+			}
+			.intro-note {
+				border-left: 1px solid #cfcbbd;
+				padding: 10px 0 10px 32px;
+				margin-top: 28px;
+				color: #687066;
+				font: italic 16px/1.7 var(--serif);
+			}
+			.intro-note span {
+				display: block;
+				margin-top: 12px;
+				font: 700 9px var(--sans);
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				color: var(--ink);
+			}
+			.projects {
+				background: #ebe9e0;
+				padding: 91px 0 96px;
+			}
+			.section-heading {
+				display: flex;
+				justify-content: space-between;
+				align-items: end;
+				margin-bottom: 32px;
+			}
+			.section-heading h2 {
+				margin: 14px 0 0;
+			}
+			.slide-controls {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				padding-bottom: 4px;
+			}
+			.slide-count {
+				color: #777b70;
+				font-size: 10px;
+				margin: 0 10px;
+				letter-spacing: 0.08em;
+			}
+			.slide-count strong {
+				color: var(--ink);
+			}
+			.slide-button {
+				width: 39px;
+				height: 39px;
+				display: grid;
+				place-items: center;
+				border: 1px solid #c9c8bd;
+				background: transparent;
+				color: var(--ink);
+				cursor: pointer;
+				transition: all 0.2s;
+			}
+			.slide-button:hover {
+				background: var(--ink);
+				color: white;
+				border-color: var(--ink);
+			}
+			.slide-button svg {
+				width: 15px;
+				height: 15px;
+			}
+			.project-stage {
+				display: grid;
+				grid-template-columns: 1.55fr 0.75fr;
+				min-height: 360px;
+				background: var(--paper);
+			}
+			.project-photo {
+				min-height: 360px;
+				position: relative;
+				overflow: hidden;
+				background: #777b70;
+			}
+			.project-photo img {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				inset: 0;
+				object-fit: cover;
+				transition: opacity 0.25s;
+			}
+			.project-photo::after {
+				content: "";
+				position: absolute;
+				inset: 45% 0 0;
+				background: linear-gradient(transparent, rgba(20, 25, 21, 0.4));
+				pointer-events: none;
+			}
+			.photo-tag {
+				position: absolute;
+				bottom: 22px;
+				left: 25px;
+				z-index: 1;
+				color: white;
+				font-size: 9px;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+			}
+			.project-details {
+				padding: 43px 39px;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			.project-details .eyebrow {
+				font-size: 9px;
+			}
+			.project-details h3 {
+				font: 500 29px/1.15 var(--serif);
+				margin: 18px 0 12px;
+				letter-spacing: -0.025em;
+			}
+			.project-details p {
+				color: #73786e;
+				font-size: 12px;
+				line-height: 1.8;
+				margin-bottom: 21px;
+			}
+			.project-meta {
+				width: 100%;
+				border-top: 1px solid var(--line);
+				padding-top: 15px;
+				margin-top: auto;
+				display: flex;
+				justify-content: space-between;
+				gap: 8px;
+				color: #6c7168;
+				font-size: 10px;
+			}
+			.project-meta strong {
+				color: var(--ink);
+				font-weight: 700;
+			}
+			.services {
+				padding: 100px 0;
+			}
+			.service-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 80px;
+				align-items: center;
+			}
+			.service-visual {
+				min-height: 375px;
+				position: relative;
+				background: #c9c8bb;
+			}
+			.service-visual img {
+				position: absolute;
+				width: 82%;
+				height: 85%;
+				left: 0;
+				top: 0;
+				object-fit: cover;
+			}
+			.service-card {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 52%;
+				background: var(--ink);
+				color: white;
+				padding: 25px 24px;
+			}
+			.service-card strong {
+				display: block;
+				font: 500 26px var(--serif);
+				color: #e4c4a7;
+				margin-bottom: 7px;
+			}
+			.service-card span {
+				color: #d1d5cc;
+				font-size: 10px;
+				line-height: 1.6;
+			}
+			.service-copy h2 {
+				max-width: 440px;
+			}
+			.service-copy > p {
+				max-width: 465px;
+				margin-bottom: 24px;
+			}
+			.service-list {
+				list-style: none;
+				padding: 0;
+				margin: 26px 0 0;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 15px 22px;
+			}
+			.service-list li {
+				display: flex;
+				gap: 9px;
+				align-items: center;
+				font-size: 11px;
+				color: #465047;
+			}
+			.service-list svg {
+				color: var(--copper);
+				width: 15px;
+				height: 15px;
+				flex: 0 0 auto;
+			}
+			.contact {
+				background: var(--ink);
+				color: white;
+				padding: 91px 0;
+			}
+			.contact-grid {
+				display: grid;
+				grid-template-columns: 1fr 0.95fr;
+				gap: 100px;
+				align-items: start;
+			}
+			.contact-copy .eyebrow {
+				color: #c99b7a;
+			}
+			.contact-copy h2 {
+				font-size: clamp(36px, 4vw, 48px);
+				max-width: 430px;
+				margin: 17px 0;
+			}
+			.contact-copy > p {
+				color: #c2c8bf;
+				font-size: 13px;
+				line-height: 1.8;
+				max-width: 400px;
+			}
+			.contact-promise {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				color: #e1e3dc;
+				margin-top: 32px;
+				font-size: 11px;
+			}
+			.contact-promise svg {
+				color: #c99b7a;
+				width: 18px;
+				height: 18px;
+			}
+			.contact-form {
+				background: #f5f3ec;
+				padding: 34px;
+				color: var(--ink);
+			}
+			.contact-form h3 {
+				margin: 0 0 6px;
+				font: 600 21px var(--display);
+				letter-spacing: -0.03em;
+			}
+			.contact-form > p {
+				color: #777b70;
+				font-size: 11px;
+				margin-bottom: 23px;
+			}
+			.form-row {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 14px;
+			}
+			.field {
+				margin-bottom: 15px;
+			}
+			.field label {
+				display: block;
+				color: #51594f;
+				font-size: 10px;
+				font-weight: 700;
+				margin-bottom: 7px;
+			}
+			.field input,
+			.field textarea {
+				width: 100%;
+				background: #fbfaf6;
+				border: 1px solid #deddd4;
+				border-radius: 1px;
+				padding: 11px 12px;
+				color: var(--ink);
+				font-size: 12px;
+				outline: none;
+				transition: border 0.2s;
+			}
+			.field input:focus,
+			.field textarea:focus {
+				border-color: var(--moss);
+			}
+			.field textarea {
+				min-height: 77px;
+				resize: vertical;
+			}
+			.submit-button {
+				width: 100%;
+				min-height: 46px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border: 0;
+				background: var(--ink);
+				color: white;
+				padding: 0 16px;
+				cursor: pointer;
+				font-size: 11px;
+				font-weight: 700;
+				transition: background 0.2s;
+			}
+			.submit-button:hover {
+				background: #435247;
+			}
+			.submit-button svg {
+				width: 15px;
+				height: 15px;
+			}
+			.form-status {
+				font-size: 11px;
+				line-height: 1.5;
+				margin: 12px 0 0;
+				color: #435247;
+			}
+			.footer {
+				background: #19211c;
+				color: #bfc5bb;
+				padding: 25px 0;
+				font-size: 10px;
+			}
+			.footer-inner {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 20px;
+			}
+			.footer .brand-name {
+				color: #f4f1e9;
+				font-size: 13px;
+			}
+			.footer .brand-mark {
+				background: #303a32;
+			}
+			.footer-note {
+				margin: 0;
+			}
+			.footer a {
+				color: #e4c4a7;
+			}
+			@media (max-width: 850px) {
+				.wrap {
+					width: min(100% - 44px, 680px);
+				}
+				.nav-links {
+					gap: 20px;
+				}
+				.hero {
+					grid-template-columns: 1fr 1fr;
+					min-height: 510px;
+				}
+				.hero-image {
+					min-height: 510px;
+				}
+				.hero-copy-inner {
+					padding-right: 28px;
+					width: calc(100% - 44px);
+				}
+				h1 {
+					font-size: clamp(42px, 6vw, 56px);
+				}
+				.intro-grid,
+				.service-grid {
+					gap: 45px;
+				}
+				.contact-grid {
+					gap: 45px;
+				}
+				.project-details {
+					padding: 32px 27px;
+				}
+				.project-stage {
+					grid-template-columns: 1.25fr 0.75fr;
+				}
+				.trust-item {
+					gap: 8px;
+				}
+			}
+			@media (max-width: 640px) {
+				.wrap {
+					width: calc(100% - 40px);
+				}
+				.topbar {
+					height: 36px;
+				}
+				.topbar-inner {
+					justify-content: center;
+				}
+				.topbar-right {
+					display: none;
+				}
+				.navbar {
+					height: 70px;
+				}
+				.menu-toggle {
+					display: block;
+					cursor: pointer;
+				}
+				.nav-links {
+					display: none;
+					position: absolute;
+					top: 70px;
+					left: 0;
+					right: 0;
+					padding: 18px 20px 22px;
+					background: var(--paper);
+					flex-direction: column;
+					align-items: stretch;
+					gap: 0;
+					border-top: 1px solid var(--line);
+					box-shadow: 0 12px 18px #20292312;
+				}
+				.nav-links.open {
+					display: flex;
+				}
+				.nav-links a:not(.nav-cta) {
+					padding: 12px 0;
+				}
+				.nav-cta {
+					text-align: center;
+					margin-top: 8px;
+				}
+				.hero {
+					grid-template-columns: 1fr;
+				}
+				.hero-copy {
+					justify-content: flex-start;
+				}
+				.hero-copy-inner {
+					width: calc(100% - 40px);
+					margin: 0 auto;
+					padding: 55px 0 49px;
+				}
+				h1 {
+					max-width: 390px;
+					font-size: clamp(48px, 13vw, 64px);
+				}
+				.hero-copy p {
+					font-size: 13px;
+				}
+				.hero-image {
+					min-height: 300px;
+				}
+				.hero-caption {
+					left: 20px;
+					bottom: 20px;
+				}
+				.trust-inner {
+					grid-template-columns: 1fr 1fr;
+					padding: 14px 0;
+				}
+				.trust-item {
+					justify-content: flex-start !important;
+					padding: 13px 5px;
+					border-right: 0;
+				}
+				.trust-item:nth-child(odd) {
+					border-right: 1px solid #485047;
+				}
+				.trust-item:nth-child(3),
+				.trust-item:nth-child(4) {
+					border-top: 1px solid #485047;
+				}
+				.intro {
+					padding: 75px 0;
+				}
+				.intro-grid,
+				.service-grid,
+				.contact-grid {
+					grid-template-columns: 1fr;
+					gap: 32px;
+				}
+				.intro-grid {
+					gap: 15px;
+				}
+				.intro-note {
+					margin-top: 18px;
+				}
+				.projects {
+					padding: 69px 0;
+				}
+				.section-heading {
+					align-items: end;
+					gap: 10px;
+				}
+				.section-heading h2 {
+					font-size: 35px;
+				}
+				.section-heading .eyebrow {
+					font-size: 8px;
+				}
+				.slide-controls {
+					gap: 5px;
+				}
+				.slide-count {
+					margin: 0 3px;
+				}
+				.slide-button {
+					width: 34px;
+					height: 34px;
+				}
+				.project-stage {
+					grid-template-columns: 1fr;
+				}
+				.project-photo {
+					min-height: 265px;
+				}
+				.project-details {
+					min-height: 245px;
+					padding: 27px;
+				}
+				.services {
+					padding: 72px 0;
+				}
+				.service-grid {
+					gap: 40px;
+				}
+				.service-visual {
+					min-height: 300px;
+				}
+				.service-visual img {
+					height: 84%;
+				}
+				.service-card {
+					padding: 20px;
+				}
+				.contact {
+					padding: 70px 0;
+				}
+				.contact-grid {
+					gap: 32px;
+				}
+				.contact-form {
+					padding: 25px 21px;
+				}
+				.form-row {
+					gap: 10px;
+				}
+				.footer-inner {
+					flex-wrap: wrap;
+				}
+				.footer-note {
+					order: 3;
+					flex-basis: 100%;
+				}
+			}
+			@media (prefers-reduced-motion: reduce) {
+				html {
+					scroll-behavior: auto;
+				}
+				*,
+				*::before,
+				*::after {
+					transition-duration: 0.01ms !important;
+					animation-duration: 0.01ms !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="topbar">
+			<div class="wrap topbar-inner">
+				<p>Good work. Good people. Roofs built to last.</p>
+				<div class="topbar-right">
+					<span>Serving our local community</span
+					><a href="#contact">Request an estimate</a>
+				</div>
+			</div>
+		</div>
+		<header class="navbar">
+			<div class="wrap nav-inner">
+				<a class="brand" href="#home" aria-label="Erickson Roofing home">
+					<span class="brand-mark" aria-hidden="true"
+						><svg viewBox="0 0 24 24" fill="none">
+							<path
+								d="M3 11.5 12 4l9 7.5M6 10.5V20h12v-9.5M9.5 20v-6h5v6M3 12l9-7 9 7"
+								stroke="currentColor"
+								stroke-width="1.6"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/></svg
+					></span>
+					<span class="brand-name"
+						>Erickson Roofing<span>Crafted with care</span></span
+					>
+				</a>
+				<button
+					class="menu-toggle"
+					type="button"
+					aria-label="Toggle navigation"
+					aria-expanded="false"
+				>
+					<svg
+						width="23"
+						height="23"
+						viewBox="0 0 24 24"
+						fill="none"
+						aria-hidden="true"
+					>
+						<path
+							d="M4 7h16M4 12h16M4 17h16"
+							stroke="currentColor"
+							stroke-width="1.6"
+							stroke-linecap="round"
+						/>
+					</svg>
+				</button>
+				<nav class="nav-links" aria-label="Main navigation">
+					<a href="#about">Our company</a>
+					<a href="#projects">Our work</a>
+					<a href="#service-area">Where we work</a>
+					<a class="nav-cta" href="#contact">Get a free estimate</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero" id="home">
+				<div class="hero-copy">
+					<div class="hero-copy-inner">
+						<span class="eyebrow">A better kind of roofing company</span>
+						<h1>Built for the<br /><em>long haul.</em></h1>
+						<p>
+							Your roof should feel like one less thing to worry about. We bring
+							thoughtful advice, skilled hands, and a job done right to every
+							home we work on.
+						</p>
+						<a class="button-dark" href="#contact"
+							>Let’s talk about your roof
+							<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+								<path
+									d="M5 12h14m-6-6 6 6-6 6"
+									stroke="currentColor"
+									stroke-width="1.6"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/></svg
+						></a>
+					</div>
+				</div>
+				<div class="hero-image">
+					<img
+						src="https://www.iko.com/na/wp-content/uploads/2026/02/armourshakehouseflipweb.jpg"
+						alt="Craftsman-style home with a detailed shingle roof"
+						fetchpriority="high"
+					/>
+					<div class="hero-caption">
+						<span>01 / 03</span> Thoughtful work. Lasting roofs.
+					</div>
+				</div>
+			</section>
+
+			<div class="trustbar" aria-label="Our commitments">
+				<div class="wrap trust-inner">
+					<div class="trust-item">
+						<svg
+							class="trust-icon"
+							viewBox="0 0 24 24"
+							fill="none"
+							aria-hidden="true"
+						>
+							<path
+								d="M12 3 5 6v5c0 4.5 2.9 8.2 7 10 4.1-1.8 7-5.5 7-10V6l-7-3Z"
+								stroke="currentColor"
+								stroke-width="1.5"
+							/>
+							<path
+								d="m9 12 2 2 4-4"
+								stroke="currentColor"
+								stroke-width="1.5"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/></svg
+						><span
+							><strong>Work you can count on</strong>Craftsmanship that holds
+							up</span
+						>
+					</div>
+					<div class="trust-item">
+						<svg
+							class="trust-icon"
+							viewBox="0 0 24 24"
+							fill="none"
+							aria-hidden="true"
+						>
+							<path
+								d="M12 21s7-4.4 7-11V5l-7-2-7 2v5c0 6.6 7 11 7 11Z"
+								stroke="currentColor"
+								stroke-width="1.5"
+							/>
+							<path
+								d="M9 12h6m-3-3v6"
+								stroke="currentColor"
+								stroke-width="1.5"
+								stroke-linecap="round"
+							/></svg
+						><span
+							><strong>Respect for your home</strong>Clean, considered job
+							sites</span
+						>
+					</div>
+					<div class="trust-item">
+						<svg
+							class="trust-icon"
+							viewBox="0 0 24 24"
+							fill="none"
+							aria-hidden="true"
+						>
+							<path
+								d="M12 3v2m0 14v2M3 12h2m14 0h2m-2.6-6.4-1.4 1.4m-8 8-1.4 1.4m0-10.8 1.4 1.4m8 8 1.4 1.4M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"
+								stroke="currentColor"
+								stroke-width="1.5"
+								stroke-linecap="round"
+							/></svg
+						><span
+							><strong>Clear from day one</strong>Honest answers, no
+							pressure</span
+						>
+					</div>
+					<div class="trust-item">
+						<svg
+							class="trust-icon"
+							viewBox="0 0 24 24"
+							fill="none"
+							aria-hidden="true"
+						>
+							<path
+								d="M4 18.5 12 4l8 14.5H4Z"
+								stroke="currentColor"
+								stroke-width="1.5"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M12 9v4m0 2.5h.01"
+								stroke="currentColor"
+								stroke-width="1.7"
+								stroke-linecap="round"
+							/></svg
+						><span
+							><strong>Here when you need us</strong>Local people, real
+							follow-through</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<section class="intro" id="about">
+				<div class="wrap intro-grid">
+					<div>
+						<span class="eyebrow">A little about us</span>
+						<h2>Good roofs start<br />with good people.</h2>
+					</div>
+					<div class="intro-copy">
+						<p>
+							Erickson Roofing is a local crew that believes home improvement
+							should feel straightforward. We take the time to understand what
+							your home needs, walk you through your options, and treat your
+							place like it’s our own.
+						</p>
+						<p>
+							From the first conversation to the final cleanup, our promise is
+							simple: show up, do careful work, and stand behind it.
+						</p>
+						<a class="text-link" href="#contact"
+							>Meet your roofing team
+							<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+								<path
+									d="M5 12h14m-6-6 6 6-6 6"
+									stroke="currentColor"
+									stroke-width="1.6"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/></svg
+						></a>
+						<div class="intro-note">
+							“We want you to feel good about your roof—and about the people who
+							put it there.”<span>The Erickson Roofing team</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="projects" id="projects">
+				<div class="wrap">
+					<div class="section-heading">
+						<div>
+							<span class="eyebrow">A few recent projects</span>
+							<h2>Work we’re proud of.</h2>
+						</div>
+						<div class="slide-controls" aria-label="Project slideshow controls">
+							<span class="slide-count"
+								><strong id="slide-current">01</strong> /
+								<span id="slide-total">03</span></span
+							>
+							<button
+								class="slide-button"
+								id="slide-prev"
+								type="button"
+								aria-label="Previous project"
+							>
+								<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+									<path
+										d="M19 12H5m6 6-6-6 6-6"
+										stroke="currentColor"
+										stroke-width="1.6"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</button>
+							<button
+								class="slide-button"
+								id="slide-next"
+								type="button"
+								aria-label="Next project"
+							>
+								<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+									<path
+										d="M5 12h14m-6-6 6 6-6 6"
+										stroke="currentColor"
+										stroke-width="1.6"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="project-stage" aria-live="polite">
+						<div class="project-photo">
+							<img
+								id="project-image"
+								src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1400&q=85"
+								alt="Charcoal shingle roof on a traditional home"
+							/><span class="photo-tag" id="project-tag"
+								>Local project · Complete roof</span
+							>
+						</div>
+						<div class="project-details">
+							<span class="eyebrow" id="project-type">Residential roofing</span>
+							<h3 id="project-title">A fresh start<br />for a family home.</h3>
+							<p id="project-description">
+								A full roof replacement with durable architectural shingles,
+								careful detailing, and a tidy finish from ridge to garden.
+							</p>
+							<div class="project-meta">
+								<span
+									><strong>Project</strong><br /><span id="project-meta-type"
+										>Roof replacement</span
+									></span
+								><span
+									><strong>Finish</strong><br /><span id="project-finish"
+										>Weathered charcoal</span
+									></span
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="services" id="service-area">
+				<div class="wrap service-grid">
+					<div class="service-visual">
+						<img
+							src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85"
+							alt="Warm, carefully maintained home surrounded by mature trees"
+							loading="lazy"
+						/>
+						<div class="service-card">
+							<strong>Right around here.</strong
+							><span
+								>Local crew. Thoughtful service.<br />Rooted in the
+								community.</span
+							>
+						</div>
+					</div>
+					<div class="service-copy">
+						<span class="eyebrow">Where we work</span>
+						<h2>Neighbors serving neighbors.</h2>
+						<p>
+							We work in our local community and surrounding towns. Being local
+							means we know the weather, the homes, and what a roof needs to
+							last around here.
+						</p>
+						<p>
+							Not sure if we cover your address? Send us a note—we’re happy to
+							help.
+						</p>
+						<ul class="service-list">
+							<li>
+								<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+									<path
+										d="m5 12 4 4L19 6"
+										stroke="currentColor"
+										stroke-width="1.7"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/></svg
+								>Local community
+							</li>
+							<li>
+								<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+									<path
+										d="m5 12 4 4L19 6"
+										stroke="currentColor"
+										stroke-width="1.7"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/></svg
+								>Surrounding towns
+							</li>
+							<li>
+								<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+									<path
+										d="m5 12 4 4L19 6"
+										stroke="currentColor"
+										stroke-width="1.7"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/></svg
+								>Residential roofing
+							</li>
+							<li>
+								<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+									<path
+										d="m5 12 4 4L19 6"
+										stroke="currentColor"
+										stroke-width="1.7"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/></svg
+								>Repairs &amp; replacement
+							</li>
+						</ul>
+						<a class="text-link" href="#contact"
+							>Ask about your area
+							<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+								<path
+									d="M5 12h14m-6-6 6 6-6 6"
+									stroke="currentColor"
+									stroke-width="1.6"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/></svg
+						></a>
+					</div>
+				</div>
+			</section>
+
+			<section class="contact" id="contact">
+				<div class="wrap contact-grid">
+					<div class="contact-copy">
+						<span class="eyebrow">Let’s get started</span>
+						<h2>A good roof begins with a conversation.</h2>
+						<p>
+							Tell us a little about what you need. We’ll get back to you to
+							talk it through—no pressure, just helpful advice.
+						</p>
+						<div class="contact-promise">
+							<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+								<path
+									d="M12 3 5 6v5c0 4.5 2.9 8.2 7 10 4.1-1.8 7-5.5 7-10V6l-7-3Z"
+									stroke="currentColor"
+									stroke-width="1.5"
+								/>
+								<path
+									d="m9 12 2 2 4-4"
+									stroke="currentColor"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/></svg
+							>Your details will only be used to follow up about your project.
+						</div>
+					</div>
+					<form class="contact-form" id="contact-form">
+						<h3>Request a call back</h3>
+						<p>
+							This demo form is not connected yet; submissions will not be sent.
+						</p>
+						<div class="form-row">
+							<div class="field">
+								<label for="name">Your name</label
+								><input
+									id="name"
+									name="name"
+									type="text"
+									autocomplete="name"
+									placeholder="Jane Smith"
+									required
+								/>
+							</div>
+							<div class="field">
+								<label for="phone">Phone number</label
+								><input
+									id="phone"
+									name="phone"
+									type="tel"
+									autocomplete="tel"
+									placeholder="(555) 000-0000"
+									required
+								/>
+							</div>
+						</div>
+						<div class="field">
+							<label for="email">Email address</label
+							><input
+								id="email"
+								name="email"
+								type="email"
+								autocomplete="email"
+								placeholder="you@example.com"
+								required
+							/>
+						</div>
+						<div class="field">
+							<label for="message"
+								>How can we help?
+								<span style="font-weight: 400; color: #85877e"
+									>(optional)</span
+								></label
+							><textarea
+								id="message"
+								name="message"
+								placeholder="A little about your project..."
+							></textarea>
+						</div>
+						<button class="submit-button" type="submit">
+							Send my request
+							<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+								<path
+									d="M5 12h14m-6-6 6 6-6 6"
+									stroke="currentColor"
+									stroke-width="1.6"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</button>
+						<p
+							class="form-status"
+							id="form-status"
+							role="status"
+							aria-live="polite"
+						></p>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="wrap footer-inner">
+				<a class="brand" href="#home">
+					<span class="brand-mark" aria-hidden="true"
+						><svg viewBox="0 0 24 24" fill="none">
+							<path
+								d="M3 11.5 12 4l9 7.5M6 10.5V20h12v-9.5M9.5 20v-6h5v6"
+								stroke="currentColor"
+								stroke-width="1.6"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/></svg
+					></span>
+					<span class="brand-name"
+						>Erickson Roofing<span>Crafted with care</span></span
+					>
+				</a>
+				<p class="footer-note">Good work. Good people. Roofs built to last.</p>
+				<a href="#contact">Get in touch</a>
+			</div>
+		</footer>
+		<script>
+			const projects = [
+				{
+					image:
+						"https://images.ctfassets.net/79nimht05j33/3DjL3L34ycDVYD3lsWyxMS/42a87aa5838bb68755871790c18c1d35/parts-of-my-roof.jpg?w=1200&h=630&fl=progressive&q=100&fm=jpg&bg=transparent",
+					alt: "Charcoal shingle roof on a traditional home",
+					tag: "Local project · Complete roof",
+					type: "Residential roofing",
+					title: "A fresh start<br>for a family home.",
+					description:
+						"A full roof replacement with durable architectural shingles, careful detailing, and a tidy finish from ridge to garden.",
+					meta: "Roof replacement",
+					finish: "Weathered charcoal",
+				},
+				{
+					image:
+						"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85",
+					alt: "Modern home framed by mature trees",
+					tag: "Local project · Roof replacement",
+					type: "Residential roofing",
+					title: "A classic home,<br>ready for what’s next.",
+					description:
+						"A thoughtful update that complements the home’s original character and adds a dependable layer of protection.",
+					meta: "Roof replacement",
+					finish: "Natural slate blend",
+				},
+				{
+					image:
+						"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85",
+					alt: "Contemporary home with clean lines and a carefully finished roof",
+					tag: "Local project · Roof renovation",
+					type: "Residential roofing",
+					title: "Small details.<br>Big difference.",
+					description:
+						"From flashing to finish, this roof renovation focused on the details that keep a home protected season after season.",
+					meta: "Roof renovation",
+					finish: "Deep graphite",
+				},
+			];
+			let activeProject = 0;
+			const setProject = (index) => {
+				activeProject = (index + projects.length) % projects.length;
+				const project = projects[activeProject];
+				document.getElementById("project-image").src = project.image;
+				document.getElementById("project-image").alt = project.alt;
+				document.getElementById("project-tag").textContent = project.tag;
+				document.getElementById("project-type").textContent = project.type;
+				document.getElementById("project-title").innerHTML = project.title;
+				document.getElementById("project-description").textContent =
+					project.description;
+				document.getElementById("project-meta-type").textContent = project.meta;
+				document.getElementById("project-finish").textContent = project.finish;
+				document.getElementById("slide-current").textContent = String(
+					activeProject + 1,
+				).padStart(2, "0");
+			};
+			document
+				.getElementById("slide-prev")
+				.addEventListener("click", () => setProject(activeProject - 1));
+			document
+				.getElementById("slide-next")
+				.addEventListener("click", () => setProject(activeProject + 1));
+
+			const menuButton = document.querySelector(".menu-toggle");
+			const navLinks = document.querySelector(".nav-links");
+			menuButton.addEventListener("click", () => {
+				const isOpen = navLinks.classList.toggle("open");
+				menuButton.setAttribute("aria-expanded", String(isOpen));
+			});
+			navLinks.addEventListener("click", (event) => {
+				if (event.target.closest("a")) {
+					navLinks.classList.remove("open");
+					menuButton.setAttribute("aria-expanded", "false");
+				}
+			});
+
+			document
+				.getElementById("contact-form")
+				.addEventListener("submit", (event) => {
+					event.preventDefault();
+					if (!event.currentTarget.reportValidity()) return;
+					document.getElementById("form-status").textContent =
+						"This demo form does not send or store your details yet. Connect it to your email or a form service before publishing.";
+				});
+		</script>
+	</body>
+</html>
